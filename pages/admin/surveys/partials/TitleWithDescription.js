@@ -36,7 +36,7 @@ const TitleWithDescription = ({ setSubtitle, goNext, }) => {
 
     useEffect(() => {
         setSubtitle("Provide title and a short description of the survey below.")
-    }, [])
+    }, [setSubtitle])
 
     return (
         <div className="abolute px-4 grid grid-cols-1 pb-0">
