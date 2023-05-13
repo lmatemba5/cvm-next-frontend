@@ -74,7 +74,7 @@ function Users() {
         }
 
         getUsers();
-    }, [])
+    }, [dispatch, setLoading])
 
     return (
         <DashboardLayout sidebar={<Sidebar />}>

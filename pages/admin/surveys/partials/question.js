@@ -51,7 +51,7 @@ function Questions({ goNext, setSubtitle }) {
             type: 'structured',
             text: ''
         })
-    }, [questions])
+    }, [questions, setSubtitle])
 
     return (
         <div className="px-4 grid grid-cols-1">

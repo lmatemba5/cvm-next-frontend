@@ -14,7 +14,7 @@ const CreateQuestion = ({ number, handleChange, survey }) => (
             <div className="mb-4">
 
                 <div className="flex items-center justify-between">
-                    <div className={`w-full ${survey.type.startsWith('struct') ? 'w-4/5 md:pr-3' : ''}`}>
+                    <div className={`w-full ${survey?.type.startsWith('struct') ? 'w-4/5 md:pr-3' : ''}`}>
                         <label>Question Type</label>
                         <select defaultValue='structured' onChange={(e) => handleChange('type', e.target.value)} name="type" className="w-full p-2 bg-white border rounded-md focus:outline-none focus:border-sky-500">
                             <option value="">---select---</option>
@@ -22,7 +22,7 @@ const CreateQuestion = ({ number, handleChange, survey }) => (
                             <option value="structured">Structured</option>
                         </select>
                     </div>
-                    <div className={`${survey.type.startsWith('struct') ? 'w-1/5' : 'hidden'}`}>
+                    <div className={`${survey?.type.startsWith('struct') ? 'w-1/5' : 'hidden'}`}>
                         <label>Characters</label>
                         <select defaultValue={50} name="characters" className="w-full p-2 bg-white border rounded-md focus:outline-none focus:border-sky-500">
                             <option value="">---select---</option>
@@ -34,7 +34,7 @@ const CreateQuestion = ({ number, handleChange, survey }) => (
                 </div>
             </div>
             {
-                survey.type === 'structured' ? "Structure" : <MultipleChoice handleChange={handleChange} />
+                survey?.type === 'structured' ? "Structure" : <MultipleChoice handleChange={handleChange} />
             }
         </div>
     </div>

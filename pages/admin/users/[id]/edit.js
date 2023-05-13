@@ -7,7 +7,7 @@ import Button from '@/components/Button';
 import LoginActivity from '@/components/charts/LoginActivity';
 import useAuth from '@/hooks/auth';
 
-function edit() {
+function Edit() {
     const [user, setUser] = useState({})
     const [role, setRole] = useState('')
     const [error, setError] = useState(null)
@@ -131,4 +131,4 @@ function edit() {
     );
 }
 
-export default edit;
+export default Edit;
